@@ -30,15 +30,15 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
   gem 'bcrypt', '~> 3.1.11'
-#To create a seed with some data 
+#To create a seed with some data
   gem 'faker',                    '1.6.6'
   gem 'carrierwave',              '0.11.2'
   gem 'mini_magick',              '4.5.1'
   gem 'fog',                      '1.38.0'
   gem 'will_paginate',            '3.1.0'
-  gem 'bootstrap-will_paginate'  
+  gem 'bootstrap-will_paginate'
   gem 'bootstrap-sass',           '3.3.6'
-  
+
 
 
 # Use Capistrano for deployment
@@ -53,6 +53,11 @@ group :development, :test do
   gem 'rails-controller-testing'
 end
 
+group :test do
+  gem 'selenium-webdriver', '2.35.1'
+  gem 'capybara', '2.1.0'
+end
+
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
@@ -62,8 +67,8 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-group :production do 
+group :production do
   gem 'pg', '0.18.4'
-end   
+end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
